@@ -1,10 +1,12 @@
-📂 Data Version Control for Insurance Claims Analysis
+### 📂 Data Version Control for Insurance Claims Analysis
+
 This project establishes a reproducible and auditable data pipeline for insurance claims analysis using Data Version Control (DVC). It includes analysis on loss ratios, temporal trends, and vehicle-based claims patterns, ensuring compliance with industry standards for auditability.
 
-🗂️ Project Structure
-graphql
-Copy
-Edit
+---
+
+### 🗂️ Project Structure
+
+```
 📁 .github/  
     └── workflows/  
         └── dvc_pipeline.yml        # 🚀 CI/CD pipeline for DVC and tests  
@@ -29,59 +31,72 @@ Edit
 📄 .gitignore                       # 🚫 Files to ignore in Git  
 📄 README.md                        # 📖 Main project documentation  
 📄 requirements.txt                 # 🧩 Python dependencies  
-🏁 Getting Started
-🔧 Install Dependencies
+```
+
+---
+
+### 🏁 Getting Started
+
+#### 🔧 Install Dependencies
+
 Run the following command to install required packages:
 
-bash
-Copy
-Edit
+```
 pip install -r requirements.txt  
-🗄️ Initialize DVC
-Install DVC:
+```
 
-bash
-Copy
-Edit
-pip install dvc  
-Initialize DVC:
+#### 🗄️ Initialize DVC
 
-bash
-Copy
-Edit
-dvc init  
-Set up storage:
+1. **Install DVC**:
 
-bash
-Copy
-Edit
-dvc remote add -d localstorage /path/to/your/local/storage  
-📂 Track Data
+   ```
+   pip install dvc  
+   ```
+2. **Initialize DVC**:
+
+   ```
+   dvc init  
+   ```
+3. **Set up storage**:
+
+   ```
+   dvc remote add -d localstorage /path/to/your/local/storage  
+   ```
+
+#### 📂 Track Data
+
 Add the dataset to DVC:
 
-bash
-Copy
-Edit
+```
 dvc add data/raw/insurance_claims.csv  
+```
+
 Push data to the remote storage:
 
-bash
-Copy
-Edit
+```
 dvc push  
-📊 Visualizations
+```
+
+---
+
+### 📊 Visualizations
+
 The analysis includes the following key insights:
 
-Loss ratios across various demographic and vehicle categories.
+* Loss ratios across various demographic and vehicle categories.
+* Temporal trends in claim frequency and severity over 18 months.
+* Vehicle makes/models with the highest and lowest claim amounts.
 
-Temporal trends in claim frequency and severity over 18 months.
+Saved visualizations can be found in `reports/interim.txt`.
 
-Vehicle makes/models with the highest and lowest claim amounts.
+---
 
-Saved visualizations can be found in reports/interim.txt.
+### 🔄 Continuous Integration
 
-🔄 Continuous Integration
 ✅ DVC pipeline and tests are run automatically via GitHub Actions.
 
-📜 License
+---
+
+### 📜 License
+
 Licensed under MIT.
