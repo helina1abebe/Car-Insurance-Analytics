@@ -1,0 +1,4 @@
+[core]
+    remote = dvc-storage
+['remote "dvc-storage"']
+    url = ../outputs/dvc-storage
